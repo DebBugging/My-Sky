@@ -1,0 +1,105 @@
+body {
+  background: #95ecf9;
+  color: #d7f4e3;
+}
+.sun {
+  position: absolute;
+  margin: 50px;
+  height: 200px;
+  width: 200px;
+  max-width: 100%;
+  border-radius: 100%;
+  box-shadow: inset 1px 300px 100px #ffdd00;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.sun li {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 4px;
+  background: #ffdd00;
+  box-shadow: 1px 1px 10px #ffdd00;
+}
+
+.sun li:nth-child(1) {
+    transform: translate(-50%,-50%) rotate(0deg);
+    animation: rays 1s linear 0.5s infinite alternate;
+}
+
+.sun li:nth-child(2) {
+    transform: translate(-50%,-50%) rotate(45deg);
+  animation: rays 0.5s linear 0.5s infinite alternate;
+}
+
+.sun li:nth-child(3) {
+    transform: translate(-50%,-50%) rotate(-25deg);
+  animation: rays 2s linear 1s infinite alternate;
+}
+
+.sun li:nth-child(4) {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  animation: rays 0.5s linear 0.5s infinite alternate;
+}
+
+.sun li:nth-child(5) {
+    transform: translate(-50%,-50%) rotate(90deg);
+  animation: rays 1s linear 1.5s infinite alternate;
+}
+
+ .cloud {
+  height: 100px;
+  width: 200px;
+   max-width: 100%;
+  background: #f9fcfc;
+  border-radius: 50% 60%;
+  position: relative;
+  box-shadow: 10px 20px 5px #888888
+  
+}
+
+.cloud1 {
+  height: 75px;
+  width: 75px;
+  max-width: 100%;
+  background: #f9fcfc;
+  border-radius: 100%;
+  position: absolute;
+  margin: -20% 20%;
+  padding: 20px;
+}
+
+.middle {
+  margin: 30vw 10vw 5vw 50vw; 
+  animation: clouds 10s ease-in-out 2s infinite alternate;
+}
+
+.left {
+  margin: 10vw;
+  animation: clouds 15s ease-in-out 1s infinite alternate;
+}
+
+.right {
+  margin: 10vw -50vw -20vw 70vw;
+  animation: clouds 10s ease-in-out 5s infinite alternate;
+}
+
+@keyframes rays {
+    from {width: 400px;}
+    to {width: 600px;}
+}
+
+@keyframes clouds {
+     0%  {left:0px; top:0px;}
+    25%  {left:10px; top:0px;}
+    50%  {left:50px; top:20px;}
+    75%  {left:0px; top:50px;}
+    100% {left:0px; top:0px;}
+}
+
+
